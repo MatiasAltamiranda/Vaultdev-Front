@@ -1,0 +1,67 @@
+footer{
+    background-color: #000;
+    padding: 2rem;
+}
+
+.logo_title{
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.logo_title span{
+    color: var(--color-primary);
+}
+
+.logo_subtitle{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+.paragraph{
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.paragraph p{
+ color: #fff;
+ margin: 0;
+ font-weight: 300;
+}
+
+.paragraph p span{
+    color: var(--color-primary);
+}
+
+@media (min-width : 576px) {
+    .paragraph{
+        margin-top: 0.6rem;
+    }
+}
+
+@media (min-width : 992px) {
+    .paragraph{
+        margin-top: 0.6rem;
+    }
+
+    .logo_title{
+       font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width : 1200px) {
+    .paragraph{
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .logo_title{
+       font-size: 3rem;
+    }
+
+}
