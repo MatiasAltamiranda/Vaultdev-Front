@@ -1,4 +1,4 @@
-import VaultDev from "../../../public/VaultDev.webp";
+import VaultDev from "../../Assets/VaultDev.webp";
 import "./header.css"
 
 const Header = () => {
