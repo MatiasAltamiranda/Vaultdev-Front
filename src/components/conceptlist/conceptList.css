@@ -10,6 +10,7 @@
 
 .concept-list-container article {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
@@ -19,9 +20,7 @@
     margin: 1rem 0;
 }
 
-.concept-list-container article p {
-    margin: 0px;
-}
+
 
 .concept-list-container-btn {
     border: none;
@@ -31,6 +30,21 @@
     border-radius: 2rem;
     font-weight: 600;
 }
+
+
+
+
+@media (min-width :576px) {
+
+    .concept-list-container article p {
+        margin: 0px;
+    }
+    .concept-list-container article {
+        flex-direction: row;
+    }
+
+}
+
 
 
 
