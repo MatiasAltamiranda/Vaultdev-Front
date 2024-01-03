@@ -7,6 +7,7 @@ import Loader from "../loader/loader";
 const ConceptList = () => {
     const { getConcepts, concepts, loading } = useContext(ConceptContext);
     const [conceptsAPI, setconCeptsAPI] = useState([]);
+    const [countLis, setCountList] = useState(7)
 
     useEffect(() => {
         getConcepts();
@@ -19,21 +20,33 @@ const ConceptList = () => {
         }
     }, [concepts]);
 
+    const handleClicShowMore = () =>{
+        setCountList(countLis + 7)
+    };
+
+    const handleClicShowLess = () =>{
+        setCountList(countLis - 7)
+    };
+
     return (
         <>
             <section className="concept-list container">
                 <div className="row">
                     <div className="col-12 concept-list-container">
                         {loading ? (
-                            <Loader/>
+                            <Loader />
                         ) : (
-                            conceptsAPI.map(concept => (
+                            conceptsAPI.slice(0, countLis).map(concept => (
                                 <article key={concept._id}>
                                     <p>{concept.title}</p>
                                     <button className="concept-list-container-btn">Ver más</button>
                                 </article>
                             ))
                         )}
+                        <div className="section-btn-show">
+                            {countLis < concepts.length && <button className="concept-list-container-btn" onClick={handleClicShowMore}>Mostrar más</button>}
+                            {countLis > 7 && <button className="concept-list-container-btn" onClick={handleClicShowLess}>Mostrar menos</button>}
+                        </div>
                     </div>
                 </div>
             </section>
