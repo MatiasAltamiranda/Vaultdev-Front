@@ -1,6 +1,8 @@
 import "./conceptList.css";
 import { useContext, useEffect, useState } from "react";
 import ConceptContext from "../../context/conceptContext";
+import Loader from "../loader/loader";
+
 
 const ConceptList = () => {
     const { getConcepts, concepts, loading } = useContext(ConceptContext);
@@ -23,7 +25,7 @@ const ConceptList = () => {
                 <div className="row">
                     <div className="col-12 concept-list-container">
                         {loading ? (
-                            <h1>Cargando conceptos...</h1>
+                            <Loader/>
                         ) : (
                             conceptsAPI.map(concept => (
                                 <article key={concept._id}>

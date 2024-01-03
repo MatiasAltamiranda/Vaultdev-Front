@@ -1,0 +1,11 @@
+.btn-loader{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.loader{
+    width: 3rem;
+    height: 3rem;
+}
