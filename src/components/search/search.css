@@ -1,5 +1,6 @@
 .search {
     background-color: var(--color-primary);
+    border: 2px solid #595959;
     padding: 2rem;
     margin-bottom: 3rem;
     box-shadow: -1px 15px 0px 0px rgba(184,204,5,0.75);

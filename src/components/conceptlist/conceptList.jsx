@@ -1,5 +1,6 @@
 import "./conceptList.css";
 import { useContext, useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 import ConceptContext from "../../context/conceptContext";
 import Loader from "../loader/loader";
 
@@ -39,7 +40,9 @@ const ConceptList = () => {
                             conceptsAPI.slice(0, countLis).map(concept => (
                                 <article key={concept._id}>
                                     <p>{concept.title}</p>
+                                    <Link to={`/concept/${concept._id}`}>
                                     <button className="concept-list-container-btn">Ver más</button>
+                                    </Link>
                                 </article>
                             ))
                         )}

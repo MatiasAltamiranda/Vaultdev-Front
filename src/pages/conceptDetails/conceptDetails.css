@@ -1,0 +1,42 @@
+.concept-details-title{
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+.concept-details-paragraph{
+    font-size: 1.2rem;
+}
+
+.examples-use{
+    background-color: var(--color-primary);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 2px solid #595959;
+    box-shadow: 9px 10px 0px 0px rgba(184, 204, 5, 0.75);
+    -webkit-box-shadow: 9px 10px 0px 0px rgba(184, 204, 5, 0.75);
+    -moz-box-shadow: 9px 10px 0px 0px rgba(184, 204, 5, 0.75);
+    margin: 3rem 0;
+}
+
+.examples-tags{
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+}
+
+.examples-use h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width : 992px){
+    .concept-details-title{
+        font-size: 4rem;
+    }
+    
+    .concept-details-paragraph{
+        font-size: 1.7rem;
+    }
+}

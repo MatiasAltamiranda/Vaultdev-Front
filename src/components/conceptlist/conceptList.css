@@ -1,5 +1,6 @@
 .concept-list {
     background-color: var(--color-primary);
+    border: 2px solid #595959;
     border-radius: 1rem;
     padding: 3rem;
     box-shadow: 9px 10px 0px 0px rgba(184, 204, 5, 0.75);
