@@ -1,6 +1,7 @@
 import "./home.css";
 import ImgMain from "../../Assets/coffe_friends.svg";
 import Search from "../../components/search/search";
+import ConceptList from "../../components/conceptlist/conceptList";
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
           </div>
         </div>
         <Search />
+        <ConceptList/>
       </main>
     </>
   );

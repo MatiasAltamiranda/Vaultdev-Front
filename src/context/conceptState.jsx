@@ -18,7 +18,6 @@ const ConceptState = (prop) => {
   const getConcepts = async () => {
     try {
       const response = await clientAxios.get("/api/v1/concepts");
-      console.log(response.data.concepts)
       dispatch({ type: GET_CONCEPTS, payload: response.data.concepts });
     } catch (error) {
       console.log(error);
