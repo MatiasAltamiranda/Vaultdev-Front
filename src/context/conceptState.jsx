@@ -3,7 +3,7 @@ import ConceptContext from "./conceptContext";
 import conceptReducer from "./conceptReducer";
 import clientAxios from "../config/axios";
 
-import { GET_CONCEPTS } from "../types";
+import { GET_CONCEPTS,GET_CONCEPT } from "../types";
 
 const ConceptState = (prop) => {
   const { children } = prop;
@@ -25,7 +25,17 @@ const ConceptState = (prop) => {
   };
 
 
-  return <ConceptContext.Provider value={{...state,getConcepts}}>{children}</ConceptContext.Provider>;
+  const getConcept = async (id) => {
+    try {
+      const response = await clientAxios.get(`/api/v1/concepts/${id}`);
+      dispatch({ type: GET_CONCEPT, payload: response.data.concept});
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
+  return <ConceptContext.Provider value={{...state,getConcepts,getConcept}}>{children}</ConceptContext.Provider>;
 };
 
 export default ConceptState;

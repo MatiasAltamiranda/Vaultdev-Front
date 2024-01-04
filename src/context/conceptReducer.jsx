@@ -1,4 +1,4 @@
-import { GET_CONCEPTS } from "../types";
+import { GET_CONCEPTS,GET_CONCEPT } from "../types";
 
 const conceptReducer = (state, action) => {
   switch (action.type) {
@@ -10,6 +10,16 @@ const conceptReducer = (state, action) => {
           : [action.payload],
         loading: false,
       };
+
+      case GET_CONCEPT:
+      return {
+        ...state,
+        concepts: Array.isArray(action.payload)
+          ? action.payload
+          : [action.payload],
+        loading: false,
+      };
+
     default:
       return state;
   }
