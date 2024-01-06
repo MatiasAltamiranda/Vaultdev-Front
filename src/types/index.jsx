@@ -1,2 +1,3 @@
 export const GET_CONCEPTS = "GET_CONCEPTS";
-export const GET_CONCEPT = "GET_CONCEPT";
+export const GET_CONCEPT_ID = "GET_CONCEPT_ID";
+export const GET_CONCEPT_TITLE = "GET_CONCEPT_TITLE";

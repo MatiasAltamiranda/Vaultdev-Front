@@ -9,9 +9,9 @@ const Header = () => {
         <marquee>
           VaultDev, es nuestro proyecto sin fines de lucro, está comprometido
           con hacer que los conceptos sobre programación sean accesible para
-          todos. Al compartir nuestra página con amigos o grupos interesados,
+          todos 🤝 . Al compartir nuestra página con amigos o grupos interesados,
           contribuyes a nuestra misión. Agradecemos a todos aquellos que
-          comparten nuestra pagina!!!
+          comparten nuestra pagina!!! 😃
         </marquee>
         <NavLink to="/">
           <figure className="container-logo">

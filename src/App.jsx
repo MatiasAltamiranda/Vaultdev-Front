@@ -4,6 +4,7 @@ import Home from "./pages/home/home";
 import Layout from "./components/layout/layout";
 import ConceptState from "./context/conceptState";
 import ConceptDetails from "./pages/conceptDetails/conceptDetails";
+import SearchPage from "./pages/searchPage/searchPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/concept/:id" element={<ConceptDetails />} />
+            <Route path="/concept/search/:q" element={<SearchPage />} />
           </Routes>
         </Layout>
       </ConceptState>
